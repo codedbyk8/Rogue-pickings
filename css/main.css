@@ -52,9 +52,8 @@ p {
 header {
 	border-bottom: 3px solid #77a466;
 	display: flex;
- 	justify-content: center;
- 	align-items: center;
 	flex-flow: row wrap;
+  justify-content: center;
 }
 
 header h1 {
@@ -184,10 +183,16 @@ footer span {
 }
 
 @media all and (max-width: 767px) {
+
+  header {
+  	display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .bottom-section {
     width: 100%;
     display: flex;
-
   }
 
   .section-one, .section-two, .section-three {
@@ -206,14 +211,25 @@ footer span {
     align-items: center;
   }
 
-  @media all and (min-width:1200px) {
+    .section-one, .section-two, .section-three {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap; }
+
+  @media all and (min-width:1200px)  {
     .bottom-section {
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-
-
     }
+
+    header nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
 
 }
